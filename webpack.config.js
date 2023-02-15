@@ -13,7 +13,7 @@ module.exports = {
         }),
     ],
     devServer: {
-        static: path.join(__dirname, "public"),
+        // static: path.join(__dirname, "public"),
         proxy: {
             "/": {
                 target: "http://localhost:5001",

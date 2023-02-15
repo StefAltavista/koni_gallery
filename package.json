@@ -4,7 +4,8 @@
     "description": "react project boilerplate",
     "main": "index.js",
     "scripts": {
-        "start": "webpack-dev-server --mode development --open --hot",
+        "dev": "webpack-dev-server --mode development --open --hot",
+        "start": "node server/server.js",
         "build": "webpack --mode production"
     },
     "author": "stef altavista",

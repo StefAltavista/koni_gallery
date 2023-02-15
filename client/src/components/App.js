@@ -13,9 +13,9 @@ import Contacts from "./Contacts";
 export default function App() {
     const [files, setFiles] = useState([]);
     useEffect(() => {
-        fetch("/getFiles")
-            .then((res) => res.json())
-            .then((files) => setFiles(files));
+        fetch("/api/getFiles")
+            .then((r) => r.json())
+            .then((f) => setFiles(f));
     }, []);
 
     return (
