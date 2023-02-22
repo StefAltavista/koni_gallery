@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../../css/navBar.css";
 export default function NavBar() {
-    const location = useLocation().pathname;
+    const location = useLocation().pathname.replace("/", "");
     const menu = ["Works", "Exhibitions", "Cv", "Contacts"];
+    console.log(location);
+
     return (
         <div id="navbar">
             <div id="head">
@@ -18,9 +20,7 @@ export default function NavBar() {
                                 className={
                                     location == x ? "selected" : "notSelected"
                                 }
-                            >
-                                {`${x}`}
-                            </p>
+                            >{`${x}`}</p>
                         </Link>
                     );
                 })}

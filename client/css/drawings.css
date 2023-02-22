@@ -1,0 +1,11 @@
+#drawings {
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    margin-top: 50px;
+}
+#drawings img {
+    max-height: 70vh;
+    max-width: 70vw;
+    margin-right: 100px;
+}

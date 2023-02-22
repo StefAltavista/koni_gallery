@@ -1,0 +1,11 @@
+#paintings {
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    margin-top: 50px;
+}
+#paintings img {
+    max-height: 70vh;
+    max-width: 70vw;
+    margin-right: 100px;
+}

@@ -1,0 +1,17 @@
+#sections {
+    display: flex;
+    position: fixed;
+    top: 0;
+}
+#sections p {
+    cursor: pointer;
+    padding: 2px;
+    margin-right: 20px;
+    transition: 500ms;
+    border-radius: 5px;
+}
+
+#sections p:hover {
+    background-color: black;
+    color: rgb(255, 255, 255);
+}

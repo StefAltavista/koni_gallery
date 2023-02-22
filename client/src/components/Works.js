@@ -1,8 +1,14 @@
 import React, { useState } from "react";
+import "../../css/works.css";
+
+import Paintings from "./Paintings";
+import Drawings from "./Drawings";
+import Book from "./Book";
 
 export default function Works({ files }) {
-    const [section, setSection] = useState("drawings");
+    const [section, setSection] = useState("Book");
     const sections = ["Paintings", "Drawings", "Book"];
+    const { paintings, drawings, book } = files.images;
 
     return (
         <div id="works">
@@ -11,18 +17,18 @@ export default function Works({ files }) {
                     <p
                         onClick={() => setSection(s)}
                         className={section == s ? "selected" : "notSelected"}
+                        key={s}
                     >
                         {s}
                     </p>
                 ))}
             </div>
 
-            <div id="gallery">
-                {files &&
-                    files[section.toLocaleLowerCase()].map((x, i) => (
-                        <img src={x} key={i} />
-                    ))}
-            </div>
+            {section == "Paintings" ? (
+                <Paintings files={paintings.files} />
+            ) : null}
+            {section == "Drawings" ? <Drawings files={drawings.files} /> : null}
+            {section == "Book" ? <Book files={book.files} /> : null}
         </div>
     );
 }

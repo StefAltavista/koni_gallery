@@ -5,13 +5,15 @@ const path = require("path");
 const app = express();
 
 app.use(
-    express.static(path.join(__dirname, "..", "public", "drawings")),
-    express.static(path.join(__dirname, "..", "public", "paintings")),
-    express.static(path.join(__dirname, "..", "public", "book"))
+    express.static("public")
+    // express.static(path.join(__dirname, "..", "public", "drawings")),
+    // express.static(path.join(__dirname, "..", "public", "paintings")),
+    // express.static(path.join(__dirname, "..", "public", "book")),
+    // express.static(path.join(__dirname, "..", "public", "thumbnails"))
 );
 
 app.get("/api/getFiles", (req, res) => {
-    listFiles((list) => res.json(list));
+    res.json(listFiles());
 });
 
 app.get("*", (req, res) => {

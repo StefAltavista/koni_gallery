@@ -9,6 +9,10 @@
 
 body {
     margin: 0px;
+    padding: 0;
+}
+#body {
+    padding-left: 130px;
 }
 
 a {
@@ -31,5 +35,9 @@ a p:hover {
     display: flex;
     width: 100vw;
     height: 100vh;
-    padding: 10px;
+}
+
+.selected {
+    background-color: black;
+    color: rgb(255, 255, 255);
 }

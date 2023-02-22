@@ -1,0 +1,23 @@
+#book {
+    height: 90vh;
+    margin-top: 50px;
+}
+
+.bookImg {
+    width: 150px;
+    cursor: grab;
+}
+#comands {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flip {
+    cursor: pointer;
+    transition: 500ms;
+}
+.flip:hover {
+    color: rgb(48, 59, 149);
+    letter-spacing: 1px;
+}
