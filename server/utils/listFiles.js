@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const { createThumbnail } = require("./createThumbnail");
 
 const listFiles = () => {
     function directoryToTree(directoryPath) {
@@ -14,7 +13,6 @@ const listFiles = () => {
             const itemStat = fs.statSync(itemPath);
             if (!itemPath.includes(".DS_Store")) {
                 if (itemStat.isFile()) {
-                    // createThumbnail(itemPath);
                     files = [...files, itemPath.replace("public", "")];
 
                     tree = { files };
@@ -29,10 +27,6 @@ const listFiles = () => {
 
     const directoryPath = "./public";
     const tree = directoryToTree(directoryPath);
-    // tree.images.book.files.map((x) => createThumbnail("public" + x));
-    // tree.images.drawings.files.map((x) => createThumbnail("public" + x));
-    // tree.images.paintings.files.map((x) => createThumbnail("public" + x));
-
     return tree;
 };
 

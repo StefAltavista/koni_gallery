@@ -12,13 +12,24 @@ body {
     margin: 0px;
     padding: 0;
 }
+
+#page {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+}
 #body {
-    padding-top: 50px;
+    height: 100%;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    /* flex-direction: column;
-    justify-content: center; */
+}
+#close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }
 
 a {
@@ -28,22 +39,9 @@ a {
 a p {
     color: rgb(130, 130, 130);
     transition: 500ms;
-    /* padding-left: 10px; */
-    /* padding-right: 10px; */
-    /* border-radius: 5px; */
 }
 a p:hover {
     color: rgb(0, 0, 0);
-    /* text-decoration: underline; */
-    /* background-color: black;
-    color: rgb(255, 255, 255); */
-}
-
-#page {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
 }
 
 .selected {

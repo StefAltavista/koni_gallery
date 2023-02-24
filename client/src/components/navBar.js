@@ -9,7 +9,6 @@ export default function NavBar() {
     return (
         <div id="navbar">
             <div id="head">
-                {/* <img src="favicon.ico" /> */}
                 <p id="title">KONI GRIMM</p>
                 <div className="menuLinks">
                     {menu.map((x) => {

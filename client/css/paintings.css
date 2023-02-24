@@ -1,12 +1,14 @@
+.paintingImage img {
+    margin: 50px;
+    /* transform: scale(0.7); */
+}
+
 #paintings {
-    margin-top: 50px;
+    padding: 20px;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
+    flex-grow: inherit;
+    justify-content: center;
     align-items: center;
-}
-#paintings img {
-    max-height: 20vh;
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-bottom: 200px;
 }

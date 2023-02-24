@@ -10,6 +10,7 @@ import Works from "./Works";
 import Exhibitions from "./Exhibitions";
 import Cv from "./Cv";
 import Contacts from "./Contacts";
+import Footer from "./Footer";
 
 export default function App() {
     const [files, setFiles] = useState([]);
@@ -42,6 +43,7 @@ export default function App() {
                         <Route path="/Contacts" element={<Contacts />} />
                     </Routes>
                 </div>
+                <Footer />
             </div>
         </BrowserRouter>
     );
