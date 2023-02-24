@@ -13,7 +13,7 @@ import Contacts from "./Contacts";
 import Footer from "./Footer";
 
 export default function App() {
-    const [files, setFiles] = useState([]);
+    const [files, setFiles] = useState();
     const [imgsLoaded, setImgsLoaded] = useState(false);
     useEffect(() => {
         fetch("/api/getFiles")
@@ -31,18 +31,28 @@ export default function App() {
         <BrowserRouter>
             <div id="page">
                 <NavBar />
-                <div id="body">
-                    <Routes>
-                        <Route exact path="/" element={<Home></Home>} />
-                        <Route
-                            path="/works"
-                            element={<Works files={files} />}
-                        />
-                        <Route path="/exhibitions" element={<Exhibitions />} />
-                        <Route path="/CV" element={<Cv />} />
-                        <Route path="/Contacts" element={<Contacts />} />
-                    </Routes>
-                </div>
+                {files && (
+                    <div id="body">
+                        <Routes>
+                            <Route exact path="/" element={<Home></Home>} />
+                            {/* <Route
+                                exact
+                                path="/"
+                                element={<Works files={files} />}
+                            /> */}
+                            <Route
+                                path="/works"
+                                element={<Works files={files} />}
+                            />
+                            <Route
+                                path="/exhibitions"
+                                element={<Exhibitions />}
+                            />
+                            <Route path="/CV" element={<Cv />} />
+                            <Route path="/Contacts" element={<Contacts />} />
+                        </Routes>
+                    </div>
+                )}
                 <Footer />
             </div>
         </BrowserRouter>

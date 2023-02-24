@@ -1,9 +1,10 @@
 import React from "react";
-import NavBar from "./NavBar";
+import { Navigate } from "react-router-dom";
 export default function Home() {
+    console.log("home");
     return (
         <>
-            <p>Home</p>
+            <Navigate replace to="/Works" />
         </>
     );
 }
