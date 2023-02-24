@@ -8,7 +8,7 @@ const createThumbnail = (src) => {
         return;
     } else {
         sharp(src)
-            .resize({ width: 200 })
+            .resize({ width: 1000 })
             .toFile(dst)
             .then(function (newFileInfo) {
                 console.log("Image Resized", newFileInfo);

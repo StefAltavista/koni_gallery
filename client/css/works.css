@@ -1,17 +1,19 @@
-#sections {
+#works {
     display: flex;
-    position: fixed;
-    top: 0;
+    flex-direction: column;
+    width: 100%;
+}
+#sections {
+    /* margin-left: 130px; */
+    color: rgb(130, 130, 130);
+    display: flex;
+    width: 100%;
+    /* justify-content: flex-start; */
+    justify-content: center;
 }
 #sections p {
     cursor: pointer;
     padding: 2px;
-    margin-right: 20px;
+    margin-right: 10px;
     transition: 500ms;
-    border-radius: 5px;
-}
-
-#sections p:hover {
-    background-color: black;
-    color: rgb(255, 255, 255);
 }

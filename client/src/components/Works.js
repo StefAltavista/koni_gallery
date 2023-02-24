@@ -6,9 +6,9 @@ import Drawings from "./Drawings";
 import Book from "./Book";
 
 export default function Works({ files }) {
-    const [section, setSection] = useState("Book");
+    const [section, setSection] = useState("Paintings");
     const sections = ["Paintings", "Drawings", "Book"];
-    const { paintings, drawings, book } = files.images;
+    const { paintings, drawings, book } = files.thumbnails;
 
     return (
         <div id="works">
@@ -24,7 +24,7 @@ export default function Works({ files }) {
                 ))}
             </div>
 
-            {section == "Paintings" ? (
+            {files && section == "Paintings" ? (
                 <Paintings files={paintings.files} />
             ) : null}
             {section == "Drawings" ? <Drawings files={drawings.files} /> : null}

@@ -1,6 +1,22 @@
 #book {
+    display: flex;
+    align-items: center;
     height: 90vh;
-    margin-top: 50px;
+    width: 100%;
+    top: -20px;
+    /* margin-top: 50px; */
+}
+
+#book p {
+    color: gray;
+    font-size: 30px;
+}
+
+.arrow {
+    width: 20px;
+    margin: 25px;
+    opacity: 0.5;
+    cursor: pointer;
 }
 
 .bookImg {
@@ -8,9 +24,9 @@
     cursor: grab;
 }
 #comands {
-    margin-top: 10px;
+    margin-top: -20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .flip {

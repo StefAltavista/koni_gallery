@@ -32,7 +32,7 @@ export default function App() {
                 <NavBar />
                 <div id="body">
                     <Routes>
-                        <Route exact path="/" element={<Home />} />
+                        <Route exact path="/" element={<Home></Home>} />
                         <Route
                             path="/works"
                             element={<Works files={files} />}

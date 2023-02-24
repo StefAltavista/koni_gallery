@@ -14,7 +14,9 @@ const listFiles = () => {
             const itemStat = fs.statSync(itemPath);
             if (!itemPath.includes(".DS_Store")) {
                 if (itemStat.isFile()) {
+                    // createThumbnail(itemPath);
                     files = [...files, itemPath.replace("public", "")];
+
                     tree = { files };
                 } else if (itemStat.isDirectory()) {
                     tree[item] = directoryToTree(itemPath);

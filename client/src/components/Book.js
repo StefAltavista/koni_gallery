@@ -9,34 +9,31 @@ export default function Book({ files }) {
 
     return (
         <div id="book">
+            <img
+                src="arrowL.png"
+                className="arrow"
+                onClick={() => book.current.pageFlip().flipPrev()}
+            />
+
             <HTMLFlipBook
                 ref={book}
-                width={312}
-                height={494}
+                width={405}
+                height={642}
                 usePortrait={false}
-                maxShadowOpacity={0.3}
+                maxShadowOpacity={0.2}
                 flippingTime={1000}
+                // showCover={true}
                 onFlip={(e) => setPage(e.data / 2)}
             >
                 {files.map((x, i) => (
                     <img src={x} key={i} loading="eager" className="bookImg" />
                 ))}
             </HTMLFlipBook>
-            <div id="comands">
-                <p
-                    onClick={() => book.current.pageFlip().flipPrev()}
-                    className="flip"
-                >
-                    ← Prev
-                </p>
-                <p>Page {page}</p>
-                <p
-                    onClick={() => book.current.pageFlip().flipNext()}
-                    className="flip"
-                >
-                    Next →
-                </p>
-            </div>
+            <img
+                src="arrowR.png"
+                className="arrow"
+                onClick={() => book.current.pageFlip().flipNext()}
+            />
         </div>
     );
 }
