@@ -1,11 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
+import useWindowDimension from "../hooks/useWindowDimension";
 
 import "../../css/book.css";
 
 export default function Book({ files }) {
-    const [page, setPage] = useState(0);
     const book = useRef();
+    const { width, height } = useWindowDimension();
+    console.log(width, height);
 
     return (
         <div id="book">
@@ -22,8 +24,6 @@ export default function Book({ files }) {
                 usePortrait={false}
                 maxShadowOpacity={0.2}
                 flippingTime={1000}
-                // showCover={true}
-                onFlip={(e) => setPage(e.data / 2)}
             >
                 {files.map((x, i) => (
                     <img src={x} key={i} loading="eager" className="bookImg" />

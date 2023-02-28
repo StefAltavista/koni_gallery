@@ -12,7 +12,7 @@ const createThumbnail = (src) => {
             .metadata()
             .then((metadata) => {
                 sharp(src)
-                    .resize(Math.round(metadata.width / 10))
+                    .resize(Math.round(metadata.width / 18))
                     .toFile(dst)
                     .then(function (newFileInfo) {
                         console.log("Image Resized", newFileInfo);

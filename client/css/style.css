@@ -48,6 +48,18 @@ a p:hover {
     color: rgb(0, 0, 0);
 }
 
+.arrow {
+    width: 20px;
+    /* margin: 25px; */
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
     display: none;

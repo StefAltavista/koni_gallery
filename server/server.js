@@ -27,4 +27,4 @@ const resizeimages = () => {
     tree.images.paintings.files.map((x) => createThumbnail("public" + x));
 };
 
-// resizeimages();
+resizeimages();

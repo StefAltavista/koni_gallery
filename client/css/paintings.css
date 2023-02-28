@@ -1,10 +1,11 @@
 .paintingImage img {
-    margin: 50px;
-    /* transform: scale(0.7); */
+    margin: 20px;
+    /* max-width: 40%; */
+    /* transform: scale(0); */
 }
 
 #paintings {
-    padding: 20px;
+    /* padding: 10px; */
     width: 100vw;
     display: flex;
     flex-wrap: wrap;

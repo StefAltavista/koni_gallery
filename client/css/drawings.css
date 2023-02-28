@@ -7,24 +7,29 @@
 }
 
 #drawingsGallery {
-    border: 2px solid black;
+    /* border: 1px dotted rgb(151, 151, 151); */
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 80vh;
-    width: 70vw;
+    height: 90vh;
+    width: 90vw;
     overflow: scroll;
     transition: 1s;
-    padding-left: 100px;
-    padding-right: 100px;
     scroll-snap-type: x mandatory;
-    scroll-snap-points-y: repeat(300px);
+    scroll-snap-points-y: repeat(75vw);
 }
-#drawingsGallery img {
+.frame {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     scroll-snap-align: center;
-    width: 600px;
-    margin-left: 100px;
-    margin-right: 100px;
+    height: 100%;
+    width: 100%;
+}
+
+.frame img {
+    height: 85%;
+    width: 85%;
+    object-fit: contain;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
