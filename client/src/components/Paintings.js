@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import ViewModal from "./ViewModal";
+import Arrangable from "./Arrangable";
+import { browserName } from "react-device-detect";
 import "../../css/paintings.css";
 
 export default function Paintings({ files }) {
     const [source, setSource] = useState("");
 
     const openModal = (x) => {
+        let folder =
+            browserName == "Safari" ? "thumbnails/safari" : "thumbnails";
+
+        x = x.replace(folder, "images").split(".")[0] + ".JPG";
+        console.log(x);
         setSource(x);
     };
     const closeModal = (e) => {
@@ -17,13 +24,14 @@ export default function Paintings({ files }) {
         <div id="paintings">
             {files &&
                 files.map((x, i) => (
-                    <div className="paintingImage" key={i}>
-                        <img src={x} onClick={() => openModal(x)} />
+                    <div key={i} onClick={() => openModal(x)}>
+                        <img src={x} />
                     </div>
+                    // <Arrangable key={i} img={x}></Arrangable>
                 ))}
             {source && (
                 <ViewModal
-                    file={source.replace("thumbnails", "images")}
+                    file={source}
                     closeModal={(e) => {
                         closeModal(e);
                     }}

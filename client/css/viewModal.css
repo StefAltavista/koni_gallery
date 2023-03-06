@@ -15,12 +15,13 @@
     position: fixed;
     width: 90%;
     height: 90%;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    object-fit: scale-down;
 }
 #viewModal img {
+    object-fit: scale-down;
     max-width: 90%;
     max-height: 90%;
 }

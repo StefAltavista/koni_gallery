@@ -1,11 +1,4 @@
-.paintingImage img {
-    margin: 20px;
-    /* max-width: 40%; */
-    /* transform: scale(0); */
-}
-
 #paintings {
-    /* padding: 10px; */
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
@@ -13,3 +6,21 @@
     justify-content: center;
     align-items: center;
 }
+#paintings div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+#paintings div img {
+    width: 60%;
+}
+/* #paintings {
+    line-height: 10px;
+    -webkit-column-count: 5;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 5;
+    -moz-column-gap: 0px;
+    column-count: 5;
+    column-gap: 15px;
+} */

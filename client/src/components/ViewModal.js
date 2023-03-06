@@ -18,7 +18,7 @@ export default function ViewModal({ file, closeModal }) {
                 >
                     x
                 </div>
-                <img src={file} />
+                <img src={file} className="modalImg" />
             </div>
         </div>
     );

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../css/works.css";
+import { browserName } from "react-device-detect";
 
 import Paintings from "./Paintings";
 import Drawings from "./Drawings";
@@ -8,8 +9,10 @@ import Book from "./Book";
 export default function Works({ files }) {
     const [section, setSection] = useState("Paintings");
     const sections = ["Paintings", "Drawings", "Book"];
-    const { paintings, drawings, book } = files.thumbnails;
-
+    const { paintings } =
+        browserName == "Safari" ? files.thumbnails.safari : files.thumbnails;
+    const { drawings, book } = files.images;
+    console.log(paintings);
     return (
         <div id="works">
             <div id="sections">
