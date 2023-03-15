@@ -12,11 +12,13 @@ import Exhibitions from "./Exhibitions";
 import Cv from "./Cv";
 import Contacts from "./Contacts";
 import Footer from "./Footer";
+import * as data from "../../../data.json";
 
 export default function App() {
     const [files, setFiles] = useState();
     const [imgsLoaded, setImgsLoaded] = useState(false);
     useEffect(() => {
+        setFiles(data);
         fetch("/api/getFiles")
             .then((r) => r.json())
             .then((f) => {

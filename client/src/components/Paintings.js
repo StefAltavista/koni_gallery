@@ -11,7 +11,7 @@ export default function Paintings({ files }) {
         let folder =
             browserName == "Safari" ? "thumbnails/safari" : "thumbnails";
 
-        x = x.replace(folder, "images").split(".")[0] + ".JPG";
+        x = x.replace(folder, "originals").split(".")[0] + ".JPG";
         console.log(x);
         setSource(x);
     };

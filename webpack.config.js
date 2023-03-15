@@ -9,16 +9,16 @@ module.exports = {
     plugins: [
         new HTMLwebpackPlugin({
             template: "./client/src/index.html",
-            favicon: "./public/favicon.ico",
+            // favicon: "./images/favicon.ico",
         }),
     ],
     devServer: {
-        // static: path.join(__dirname, "public"),
-        proxy: {
-            "/": {
-                target: "http://localhost:5001",
-            },
-        },
+        static: path.join(__dirname, "public"),
+        // proxy: {
+        //     "/": {
+        //         target: "http://localhost:5001",
+        //     },
+        // },
         port: "5000",
     },
 

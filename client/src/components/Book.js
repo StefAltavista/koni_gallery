@@ -8,6 +8,7 @@ export default function Book({ files }) {
     const book = useRef();
     const { width, height } = useWindowDimension();
     console.log(width, height);
+    const r = 0.8;
 
     return (
         <div id="book">
@@ -19,8 +20,8 @@ export default function Book({ files }) {
 
             <HTMLFlipBook
                 ref={book}
-                width={405}
-                height={642}
+                width={489 * r}
+                height={710 * r}
                 usePortrait={false}
                 maxShadowOpacity={0.2}
                 flippingTime={1000}

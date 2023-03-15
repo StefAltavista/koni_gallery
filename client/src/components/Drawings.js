@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import ViewModal from "./ViewModal";
 import "../../css/drawings.css";
 
 export default function Drawings({ files }) {
     const [inView, setInView] = useState(0);
-    const [source, setSource] = useState("");
     const gallery = useRef();
+
     const drawing = [];
 
     for (let i in files) {
@@ -30,15 +29,6 @@ export default function Drawings({ files }) {
         return { opacity: inView == files.length - 1 ? "0" : "1" };
     };
 
-    const openModal = (x) => {
-        setSource(x);
-    };
-    const closeModal = (e) => {
-        e.target.id == "modalBackground" || e.target.id == "close"
-            ? setSource(false)
-            : null;
-    };
-
     useEffect(() => {
         drawing[inView]
             ? drawing[inView].current.scrollIntoView({ behavior: "smooth" })
@@ -46,7 +36,7 @@ export default function Drawings({ files }) {
     }, [inView]);
 
     return (
-        <div id="drawings">
+        <div id="drawings" ref={page}>
             <img
                 src="arrowL.png"
                 className="arrow"
@@ -59,11 +49,7 @@ export default function Drawings({ files }) {
             <div ref={gallery} id="drawingsGallery">
                 {files.map((x, idx) => (
                     <div key={idx} ref={drawing[idx]} className="frame">
-                        <img
-                            src={x}
-                            onClick={() => openModal(x)}
-                            loading="lazy"
-                        />
+                        <img src={x} loading="eager" />
                     </div>
                 ))}
             </div>
@@ -73,14 +59,6 @@ export default function Drawings({ files }) {
                 onClick={() => scroll(+1)}
                 // style={opacityR()}
             />
-            {source && (
-                <ViewModal
-                    file={source.replace("thumbnails", "images")}
-                    closeModal={(e) => {
-                        closeModal(e);
-                    }}
-                />
-            )}
         </div>
     );
 }
