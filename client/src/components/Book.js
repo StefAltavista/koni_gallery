@@ -7,13 +7,12 @@ import "../../css/book.css";
 export default function Book({ files }) {
     const book = useRef();
     const { width, height } = useWindowDimension();
-    console.log(width, height);
     const r = 0.8;
 
     return (
         <div id="book">
             <img
-                src="arrowL.png"
+                src="images/arrowL.png"
                 className="arrow"
                 onClick={() => book.current.pageFlip().flipPrev()}
             />
@@ -31,7 +30,7 @@ export default function Book({ files }) {
                 ))}
             </HTMLFlipBook>
             <img
-                src="arrowR.png"
+                src="images/arrowR.png"
                 className="arrow"
                 onClick={() => book.current.pageFlip().flipNext()}
             />

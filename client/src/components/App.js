@@ -1,33 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import preloadImages from "../api/preloadImages";
+// import preloadImages from "../api/preloadImages";
 
 import "../../css/style.css";
 
-import NavBar from "./NavBar";
-import Home from "./Home";
-import Works from "./Works";
-import Exhibitions from "./Exhibitions";
-import Cv from "./Cv";
-import Contacts from "./Contacts";
-import Footer from "./Footer";
+const NavBar = React.lazy(() => import("./navBar"));
+const Home = React.lazy(() => import("./Home"));
+const Works = React.lazy(() => import("./Works"));
+const Cv = React.lazy(() => import("./Cv"));
+const Footer = React.lazy(() => import("./Footer"));
+
 import * as data from "../../../data.json";
 
 export default function App() {
     const [files, setFiles] = useState();
-    const [imgsLoaded, setImgsLoaded] = useState(false);
+
     useEffect(() => {
         setFiles(data);
-        fetch("/api/getFiles")
-            .then((r) => r.json())
-            .then((f) => {
-                setFiles(f);
-                preloadImages(f.images.book.files);
-                preloadImages(f.images.drawings.files);
-                preloadImages(f.images.paintings.files);
-                setImgsLoaded(true);
-            });
     }, []);
 
     return (
@@ -37,22 +27,33 @@ export default function App() {
                 {files && (
                     <div id="body">
                         <Routes>
-                            <Route exact path="/" element={<Home></Home>} />
-                            {/* <Route
+                            <Route
                                 exact
                                 path="/"
-                                element={<Works files={files} />}
-                            /> */}
+                                element={
+                                    <Suspense>
+                                        <Home></Home>
+                                    </Suspense>
+                                }
+                            />
+
                             <Route
                                 path="/works"
-                                element={<Works files={files} />}
+                                element={
+                                    <Suspense>
+                                        <Works files={files} />
+                                    </Suspense>
+                                }
                             />
+
                             <Route
-                                path="/exhibitions"
-                                element={<Exhibitions />}
+                                path="/CV"
+                                element={
+                                    <Suspense>
+                                        <Cv />
+                                    </Suspense>
+                                }
                             />
-                            <Route path="/CV" element={<Cv />} />
-                            <Route path="/Contacts" element={<Contacts />} />
                         </Routes>
                     </div>
                 )}

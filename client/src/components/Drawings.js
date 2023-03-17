@@ -31,14 +31,17 @@ export default function Drawings({ files }) {
 
     useEffect(() => {
         drawing[inView]
-            ? drawing[inView].current.scrollIntoView({ behavior: "smooth" })
+            ? drawing[inView].current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "end",
+              })
             : null;
     }, [inView]);
 
     return (
         <div id="drawings" ref={page}>
             <img
-                src="arrowL.png"
+                src="images/arrowL.png"
                 className="arrow"
                 onClick={() => {
                     scroll(-1);
@@ -48,13 +51,13 @@ export default function Drawings({ files }) {
 
             <div ref={gallery} id="drawingsGallery">
                 {files.map((x, idx) => (
-                    <div key={idx} ref={drawing[idx]} className="frame">
-                        <img src={x} loading="eager" />
+                    <div key={idx} className="frame">
+                        <img src={x} ref={drawing[idx]} loading="eager" />
                     </div>
                 ))}
             </div>
             <img
-                src="arrowR.png"
+                src="images/arrowR.png"
                 className="arrow"
                 onClick={() => scroll(+1)}
                 // style={opacityR()}

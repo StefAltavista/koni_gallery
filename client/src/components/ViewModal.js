@@ -5,7 +5,6 @@ export default function ViewModal({ file, closeModal }) {
     const image = useRef();
     const [load, setLoad] = useState("loading");
     const loaded = () => {
-        console.log("now");
         setLoad("loaded");
     };
 

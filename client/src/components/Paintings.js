@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ViewModal from "./ViewModal";
-import Arrangable from "./Arrangable";
+// import Arrangable from "./Arrangable";
 import { browserName } from "react-device-detect";
 import "../../css/paintings.css";
 
@@ -12,7 +12,7 @@ export default function Paintings({ files }) {
             browserName == "Safari" ? "thumbnails/safari" : "thumbnails";
 
         x = x.replace(folder, "originals").split(".")[0] + ".JPG";
-        console.log(x);
+
         setSource(x);
     };
     const closeModal = (e) => {

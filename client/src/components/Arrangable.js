@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Resizable } from "re-resizable";
+// import { Resizable } from "re-resizable";
 import DraggableCore from "react-draggable";
 
 export default function Arrangable({ img }) {

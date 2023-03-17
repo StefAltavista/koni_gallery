@@ -31,14 +31,3 @@
     width: 85%;
     object-fit: contain;
 }
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-#drawingsGallery::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-#drawingsGallery {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}

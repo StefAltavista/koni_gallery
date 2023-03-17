@@ -9,7 +9,7 @@ module.exports = {
     plugins: [
         new HTMLwebpackPlugin({
             template: "./client/src/index.html",
-            // favicon: "./images/favicon.ico",
+            favicon: "./public/images/favicon.ico",
         }),
     ],
     devServer: {
