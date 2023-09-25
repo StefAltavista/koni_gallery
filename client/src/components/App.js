@@ -8,7 +8,7 @@ import "../../css/style.css";
 const NavBar = React.lazy(() => import("./navBar"));
 const Home = React.lazy(() => import("./Home"));
 const Works = React.lazy(() => import("./Works"));
-const Cv = React.lazy(() => import("./Cv"));
+const Info = React.lazy(() => import("./Info"));
 const Footer = React.lazy(() => import("./Footer"));
 
 import * as data from "../../../data.json";
@@ -47,10 +47,10 @@ export default function App() {
                             />
 
                             <Route
-                                path="/CV"
+                                path="/Info"
                                 element={
                                     <Suspense>
-                                        <Cv />
+                                        <Info />
                                     </Suspense>
                                 }
                             />

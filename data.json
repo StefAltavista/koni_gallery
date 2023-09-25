@@ -2,12 +2,18 @@
     "originals": {
         "book": {
             "files": [
-                "/images/originals/book/00.JPG",
-                "/images/originals/book/01a.png",
+                "/images/originals/book/00a.JPG",
+                "/images/originals/book/00b.png",
+                "/images/originals/book/01a.jpeg",
+                "/images/originals/book/01b.jpeg",
+                "/images/originals/book/02a.png",
+                "/images/originals/book/02b.png",
                 "/images/originals/book/03a.png",
                 "/images/originals/book/03b.png",
                 "/images/originals/book/04a.png",
                 "/images/originals/book/04b.png",
+                "/images/originals/book/05a.png",
+                "/images/originals/book/05b.png",
                 "/images/originals/book/06a.png",
                 "/images/originals/book/06b.png",
                 "/images/originals/book/07a.png",
@@ -28,13 +34,9 @@
                 "/images/originals/book/14b.png",
                 "/images/originals/book/15a.png",
                 "/images/originals/book/15b.png",
-                "/images/originals/book/25a.png",
-                "/images/originals/book/25b.png",
-                "/images/originals/book/26a.png",
-                "/images/originals/book/26b.png",
-                "/images/originals/book/27a.png",
-                "/images/originals/book/27b.png",
-                "/images/originals/book/30b.png"
+                "/images/originals/book/16a.png",
+                "/images/originals/book/16b.png",
+                "/images/originals/book/17a.png"
             ]
         },
         "drawings": {
@@ -95,12 +97,18 @@
     "thumbnails": {
         "book": {
             "files": [
-                "/images/thumbnails/book/00.webp",
-                "/images/thumbnails/book/01a.webp",
+                "/images/thumbnails/book/00a.webp",
+                "/images/thumbnails/book/00b.webp",
+                "/images/thumbnails/book/01a.jpeg",
+                "/images/thumbnails/book/01b.jpeg",
+                "/images/thumbnails/book/02a.webp",
+                "/images/thumbnails/book/02b.webp",
                 "/images/thumbnails/book/03a.webp",
                 "/images/thumbnails/book/03b.webp",
                 "/images/thumbnails/book/04a.webp",
                 "/images/thumbnails/book/04b.webp",
+                "/images/thumbnails/book/05a.webp",
+                "/images/thumbnails/book/05b.webp",
                 "/images/thumbnails/book/06a.webp",
                 "/images/thumbnails/book/06b.webp",
                 "/images/thumbnails/book/07a.webp",
@@ -121,13 +129,9 @@
                 "/images/thumbnails/book/14b.webp",
                 "/images/thumbnails/book/15a.webp",
                 "/images/thumbnails/book/15b.webp",
-                "/images/thumbnails/book/25a.webp",
-                "/images/thumbnails/book/25b.webp",
-                "/images/thumbnails/book/26a.webp",
-                "/images/thumbnails/book/26b.webp",
-                "/images/thumbnails/book/27a.webp",
-                "/images/thumbnails/book/27b.webp",
-                "/images/thumbnails/book/30b.webp"
+                "/images/thumbnails/book/16a.webp",
+                "/images/thumbnails/book/16b.webp",
+                "/images/thumbnails/book/17a.webp"
             ]
         },
         "drawings": {
@@ -187,12 +191,18 @@
         "safari": {
             "book": {
                 "files": [
-                    "/images/thumbnails/safari/book/00.png",
-                    "/images/thumbnails/safari/book/01a.png",
+                    "/images/thumbnails/safari/book/00a.png",
+                    "/images/thumbnails/safari/book/00b.png",
+                    "/images/thumbnails/safari/book/01a.jpeg",
+                    "/images/thumbnails/safari/book/01b.jpeg",
+                    "/images/thumbnails/safari/book/02a.png",
+                    "/images/thumbnails/safari/book/02b.png",
                     "/images/thumbnails/safari/book/03a.png",
                     "/images/thumbnails/safari/book/03b.png",
                     "/images/thumbnails/safari/book/04a.png",
                     "/images/thumbnails/safari/book/04b.png",
+                    "/images/thumbnails/safari/book/05a.png",
+                    "/images/thumbnails/safari/book/05b.png",
                     "/images/thumbnails/safari/book/06a.png",
                     "/images/thumbnails/safari/book/06b.png",
                     "/images/thumbnails/safari/book/07a.png",
@@ -213,13 +223,9 @@
                     "/images/thumbnails/safari/book/14b.png",
                     "/images/thumbnails/safari/book/15a.png",
                     "/images/thumbnails/safari/book/15b.png",
-                    "/images/thumbnails/safari/book/25a.png",
-                    "/images/thumbnails/safari/book/25b.png",
-                    "/images/thumbnails/safari/book/26a.png",
-                    "/images/thumbnails/safari/book/26b.png",
-                    "/images/thumbnails/safari/book/27a.png",
-                    "/images/thumbnails/safari/book/27b.png",
-                    "/images/thumbnails/safari/book/30b.png"
+                    "/images/thumbnails/safari/book/16a.png",
+                    "/images/thumbnails/safari/book/16b.png",
+                    "/images/thumbnails/safari/book/17a.png"
                 ]
             },
             "drawings": {

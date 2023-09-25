@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 90vh;
-    width: 100%;
+    width: 90vw;
     top: -20px;
 }
 
@@ -11,11 +11,16 @@
     color: gray;
     font-size: 30px;
 }
-
+#bookComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+}
 .bookImg {
-    height: 85%;
-    width: 85%;
-    object-fit: contain;
+    object-fit: fill;
+    padding: 0;
     cursor: grab;
 }
 #comands {

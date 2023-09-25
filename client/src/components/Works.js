@@ -7,8 +7,8 @@ import Drawings from "./Drawings";
 import Book from "./Book";
 
 export default function Works({ files }) {
-    const [section, setSection] = useState("Paintings");
-    const sections = ["Paintings", "Drawings", "Book"];
+    const [section, setSection] = useState("Book");
+    const sections = ["Book", "Paintings", "Drawings"];
 
     const { paintings, drawings, book } =
         browserName == "Safari" ? files.thumbnails.safari : files.thumbnails;
