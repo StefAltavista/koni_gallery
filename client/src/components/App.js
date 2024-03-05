@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "../../css/style.css";
 
+import Exhibitions from "./Exhibitions";
+
 const NavBar = React.lazy(() => import("./navBar"));
 const Home = React.lazy(() => import("./Home"));
 const Works = React.lazy(() => import("./Works"));
@@ -51,6 +53,14 @@ export default function App() {
                                 element={
                                     <Suspense>
                                         <Info />
+                                    </Suspense>
+                                }
+                            />
+                            <Route
+                                path="/Exhibitions"
+                                element={
+                                    <Suspense>
+                                        <Exhibitions />
                                     </Suspense>
                                 }
                             />

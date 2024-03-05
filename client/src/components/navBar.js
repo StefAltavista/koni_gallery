@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "../../css/navBar.css";
 export default function NavBar() {
     const locate = useLocation().pathname.replace("/", "");
-    const menu = ["Works", "Info"];
+    const menu = ["Works", "Info", "Exhibitions"];
 
     return (
         <div id="navbar">

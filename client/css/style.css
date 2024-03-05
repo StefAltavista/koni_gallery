@@ -32,6 +32,7 @@ body {
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    flex: 1;
 }
 #close {
     position: absolute;
@@ -73,6 +74,19 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-body {
+img {
+    transition: 300ms;
+    transition-delay: 300ms;
+}
+
+.toLoad {
+    transition: 300ms;
+    transition-delay: 200ms;
+}
+.loading {
+    opacity: 0%;
+}
+
+.loaded {
+    opacity: 100%;
 }

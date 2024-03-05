@@ -2,6 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import "../../css/drawings.css";
 
 export default function Drawings({ files }) {
+    const [load, setLoad] = useState("loading");
+    const loaded = () => {
+        setLoad("loaded");
+    };
     const [inView, setInView] = useState(0);
     const gallery = useRef();
 
@@ -46,13 +50,20 @@ export default function Drawings({ files }) {
                 onClick={() => {
                     scroll(-1);
                 }}
+
                 // style={opacityL()}
             />
 
             <div ref={gallery} id="drawingsGallery">
                 {files.map((x, idx) => (
                     <div key={idx} className="frame">
-                        <img src={x} ref={drawing[idx]} loading="eager" />
+                        <img
+                            src={x}
+                            ref={drawing[idx]}
+                            loading="eager"
+                            className={`modalImg ${load}`}
+                            onLoad={loaded}
+                        />
                     </div>
                 ))}
             </div>

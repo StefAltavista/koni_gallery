@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import HTMLFlipBook from "react-pageflip";
 import useWindowDimension from "../hooks/useWindowDimension";
@@ -7,8 +7,8 @@ import "../../css/book.css";
 
 export default function Book({ files }) {
     const bookRef = useRef();
+    const [load, setLoad] = useState("loading");
     const { width, height } = useWindowDimension();
-    console.log(width, height);
 
     return (
         <div id="book">
@@ -17,7 +17,11 @@ export default function Book({ files }) {
                 className="arrow"
                 onClick={() => bookRef.current.pageFlip().flipPrev()}
             />
-            <div id="bookComponent">
+            <div
+                id="bookComponent"
+                className={`toLoad ${load}`}
+                onLoad={() => setLoad("loaded")}
+            >
                 <HTMLFlipBook
                     ref={bookRef}
                     size="stretch"
@@ -35,8 +39,8 @@ export default function Book({ files }) {
                         <img
                             src={x}
                             key={i}
-                            loading="eager"
                             className="bookImg"
+                            loading="eager"
                         />
                     ))}
                 </HTMLFlipBook>

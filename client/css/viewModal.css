@@ -27,14 +27,6 @@
     transition: 1s;
 }
 
-.loading {
-    opacity: 0;
-}
-
-.loaded {
-    opacity: 1;
-}
-
 #spinner {
     position: absolute;
     width: 80px;

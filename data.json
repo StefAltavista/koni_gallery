@@ -1,4 +1,9 @@
 {
+    "files": [
+        "/images/arrowL.png",
+        "/images/arrowR.png",
+        "/images/favicon.ico"
+    ],
     "originals": {
         "book": {
             "files": [
@@ -63,35 +68,54 @@
             ]
         },
         "paintings": {
-            "files": [
-                "/images/originals/paintings/P01.JPG",
-                "/images/originals/paintings/P02_1.JPG",
-                "/images/originals/paintings/P03_1.JPG",
-                "/images/originals/paintings/P04_1.JPG",
-                "/images/originals/paintings/P05_1.JPG",
-                "/images/originals/paintings/P06_1.JPG",
-                "/images/originals/paintings/P07_1.JPG",
-                "/images/originals/paintings/P08_1.JPG",
-                "/images/originals/paintings/P09_1.JPG",
-                "/images/originals/paintings/P10_1.JPG",
-                "/images/originals/paintings/P11_1.JPG",
-                "/images/originals/paintings/P12_1.JPG",
-                "/images/originals/paintings/P13_1.JPG",
-                "/images/originals/paintings/P14_1.JPG",
-                "/images/originals/paintings/P15_1.JPG",
-                "/images/originals/paintings/P17_1.JPG",
-                "/images/originals/paintings/P18_1.JPG",
-                "/images/originals/paintings/P19_1.JPG",
-                "/images/originals/paintings/P20_1.JPG",
-                "/images/originals/paintings/P21_1.JPG",
-                "/images/originals/paintings/P22_1.JPG",
-                "/images/originals/paintings/P23_1.JPG",
-                "/images/originals/paintings/P24_1.JPG",
-                "/images/originals/paintings/P25_1.JPG",
-                "/images/originals/paintings/P26_1.JPG",
-                "/images/originals/paintings/P27_1.JPG",
-                "/images/originals/paintings/P28_1.JPG"
-            ]
+            "elementsOfBuilding": {
+                "files": [
+                    "/images/originals/paintings/elementsOfBuilding/P01.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P02_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P03_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P04_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P05_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P06_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P07_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P08_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P09_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P10_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P11_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P12_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P13_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P14_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P15_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P17_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P18_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P19_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P20_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P21_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P22_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P23_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P24_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P25_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P26_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P27_1.JPG",
+                    "/images/originals/paintings/elementsOfBuilding/P28_1.JPG"
+                ]
+            },
+            "newPictures": {
+                "files": [
+                    "/images/originals/paintings/newPictures/01.JPG",
+                    "/images/originals/paintings/newPictures/02.JPG",
+                    "/images/originals/paintings/newPictures/03.JPG",
+                    "/images/originals/paintings/newPictures/04.JPG",
+                    "/images/originals/paintings/newPictures/05.JPG",
+                    "/images/originals/paintings/newPictures/06.JPG",
+                    "/images/originals/paintings/newPictures/07.JPG",
+                    "/images/originals/paintings/newPictures/08.JPG",
+                    "/images/originals/paintings/newPictures/09.JPG",
+                    "/images/originals/paintings/newPictures/10.JPG",
+                    "/images/originals/paintings/newPictures/11.JPG",
+                    "/images/originals/paintings/newPictures/12.JPG",
+                    "/images/originals/paintings/newPictures/13.JPG"
+                ]
+            }
         }
     },
     "thumbnails": {
@@ -158,35 +182,54 @@
             ]
         },
         "paintings": {
-            "files": [
-                "/images/thumbnails/paintings/P01.webp",
-                "/images/thumbnails/paintings/P02_1.webp",
-                "/images/thumbnails/paintings/P03_1.webp",
-                "/images/thumbnails/paintings/P04_1.webp",
-                "/images/thumbnails/paintings/P05_1.webp",
-                "/images/thumbnails/paintings/P06_1.webp",
-                "/images/thumbnails/paintings/P07_1.webp",
-                "/images/thumbnails/paintings/P08_1.webp",
-                "/images/thumbnails/paintings/P09_1.webp",
-                "/images/thumbnails/paintings/P10_1.webp",
-                "/images/thumbnails/paintings/P11_1.webp",
-                "/images/thumbnails/paintings/P12_1.webp",
-                "/images/thumbnails/paintings/P13_1.webp",
-                "/images/thumbnails/paintings/P14_1.webp",
-                "/images/thumbnails/paintings/P15_1.webp",
-                "/images/thumbnails/paintings/P17_1.webp",
-                "/images/thumbnails/paintings/P18_1.webp",
-                "/images/thumbnails/paintings/P19_1.webp",
-                "/images/thumbnails/paintings/P20_1.webp",
-                "/images/thumbnails/paintings/P21_1.webp",
-                "/images/thumbnails/paintings/P22_1.webp",
-                "/images/thumbnails/paintings/P23_1.webp",
-                "/images/thumbnails/paintings/P24_1.webp",
-                "/images/thumbnails/paintings/P25_1.webp",
-                "/images/thumbnails/paintings/P26_1.webp",
-                "/images/thumbnails/paintings/P27_1.webp",
-                "/images/thumbnails/paintings/P28_1.webp"
-            ]
+            "elementsOfBuilding": {
+                "files": [
+                    "/images/thumbnails/paintings/elementsOfBuilding/P01.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P02_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P03_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P04_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P05_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P06_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P07_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P08_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P09_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P10_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P11_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P12_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P13_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P14_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P15_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P17_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P18_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P19_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P20_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P21_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P22_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P23_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P24_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P25_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P26_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P27_1.webp",
+                    "/images/thumbnails/paintings/elementsOfBuilding/P28_1.webp"
+                ]
+            },
+            "newPictures": {
+                "files": [
+                    "/images/thumbnails/paintings/newPictures/01.webp",
+                    "/images/thumbnails/paintings/newPictures/02.webp",
+                    "/images/thumbnails/paintings/newPictures/03.webp",
+                    "/images/thumbnails/paintings/newPictures/04.webp",
+                    "/images/thumbnails/paintings/newPictures/05.webp",
+                    "/images/thumbnails/paintings/newPictures/06.webp",
+                    "/images/thumbnails/paintings/newPictures/07.webp",
+                    "/images/thumbnails/paintings/newPictures/08.webp",
+                    "/images/thumbnails/paintings/newPictures/09.webp",
+                    "/images/thumbnails/paintings/newPictures/10.webp",
+                    "/images/thumbnails/paintings/newPictures/11.webp",
+                    "/images/thumbnails/paintings/newPictures/12.webp",
+                    "/images/thumbnails/paintings/newPictures/13.webp"
+                ]
+            }
         },
         "safari": {
             "book": {
@@ -252,35 +295,54 @@
                 ]
             },
             "paintings": {
-                "files": [
-                    "/images/thumbnails/safari/paintings/P01.jpeg",
-                    "/images/thumbnails/safari/paintings/P02_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P03_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P04_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P05_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P06_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P07_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P08_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P09_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P10_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P11_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P12_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P13_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P14_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P15_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P17_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P18_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P19_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P20_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P21_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P22_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P23_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P24_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P25_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P26_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P27_1.jpeg",
-                    "/images/thumbnails/safari/paintings/P28_1.jpeg"
-                ]
+                "elementsOfBuilding": {
+                    "files": [
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P01.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P02_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P03_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P04_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P05_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P06_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P07_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P08_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P09_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P10_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P11_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P12_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P13_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P14_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P15_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P17_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P18_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P19_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P20_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P21_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P22_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P23_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P24_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P25_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P26_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P27_1.jpeg",
+                        "/images/thumbnails/safari/paintings/elementsOfBuilding/P28_1.jpeg"
+                    ]
+                },
+                "newPictures": {
+                    "files": [
+                        "/images/thumbnails/safari/paintings/newPictures/01.png",
+                        "/images/thumbnails/safari/paintings/newPictures/02.png",
+                        "/images/thumbnails/safari/paintings/newPictures/03.png",
+                        "/images/thumbnails/safari/paintings/newPictures/04.png",
+                        "/images/thumbnails/safari/paintings/newPictures/05.png",
+                        "/images/thumbnails/safari/paintings/newPictures/06.png",
+                        "/images/thumbnails/safari/paintings/newPictures/07.png",
+                        "/images/thumbnails/safari/paintings/newPictures/08.png",
+                        "/images/thumbnails/safari/paintings/newPictures/09.png",
+                        "/images/thumbnails/safari/paintings/newPictures/10.png",
+                        "/images/thumbnails/safari/paintings/newPictures/11.png",
+                        "/images/thumbnails/safari/paintings/newPictures/12.png",
+                        "/images/thumbnails/safari/paintings/newPictures/13.png"
+                    ]
+                }
             }
         }
     }

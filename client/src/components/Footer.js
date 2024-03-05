@@ -5,9 +5,8 @@ import "../../css/footer.css";
 export default function Footer() {
     return (
         <div id="footer">
-            <Link to="/contacts">
-                <p>Contacts</p>
-            </Link>
+            <p>&copy; 2023 konnigrimm.com - All rights reserved.</p>
+            <p>Designed and developed by S. Altavista</p>
         </div>
     );
 }

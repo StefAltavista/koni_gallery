@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ViewModal from "./ViewModal";
-// import Arrangable from "./Arrangable";
 import { browserName } from "react-device-detect";
 import "../../css/paintings.css";
 
 export default function Paintings({ files }) {
     const [source, setSource] = useState("");
+    const [load, setLoad] = useState("loading");
 
     const openModal = (x) => {
         let folder =
@@ -21,13 +21,16 @@ export default function Paintings({ files }) {
             : null;
     };
     return (
-        <div id="paintings">
+        <div
+            id="paintings"
+            className={`toLoad ${load}`}
+            onLoad={() => setLoad("loaded")}
+        >
             {files &&
                 files.map((x, i) => (
                     <div key={i} onClick={() => openModal(x)}>
                         <img src={x} />
                     </div>
-                    // <Arrangable key={i} img={x}></Arrangable>
                 ))}
             {source && (
                 <ViewModal

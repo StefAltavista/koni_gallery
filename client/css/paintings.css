@@ -1,3 +1,29 @@
+#paintingsMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 90px;
+    left: 50%;
+    /* width: 100%; */
+    z-index: 1;
+    transition: 400ms;
+    overflow: hidden;
+}
+.visible {
+    height: 120px;
+    border: 1px dotted gray;
+    opacity: 100%;
+}
+
+.invisible {
+    height: 0;
+    border: 1px dotted rgba(128, 128, 128, 0);
+    opacity: 0%;
+}
+#paintingsMenu p:hover {
+    background-color: rgb(127, 147, 154);
+    color: white;
+}
 #paintings {
     width: 100vw;
     display: flex;
