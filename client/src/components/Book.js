@@ -40,7 +40,7 @@ export default function Book({ files }) {
                             src={x}
                             key={i}
                             className="bookImg"
-                            loading="eager"
+                            // loading="eager"
                         />
                     ))}
                 </HTMLFlipBook>

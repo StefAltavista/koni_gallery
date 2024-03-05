@@ -61,7 +61,7 @@ export default function Drawings({ files }) {
                             src={x}
                             ref={drawing[idx]}
                             loading="eager"
-                            className={`modalImg ${load}`}
+                            className={`toLoad ${load}`}
                             onLoad={loaded}
                         />
                     </div>
