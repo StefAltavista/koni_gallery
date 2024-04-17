@@ -1,10 +1,11 @@
 #modalBackground {
+    margin: 0;
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     display: flex;
     justify-content: center;
@@ -25,12 +26,12 @@
     flex-direction: column;
 }
 #viewModal img {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
     object-fit: scale-down;
-    width: 90%;
+    max-width: 90%;
     max-height: 97%;
     transition: 1s;
-    box-shadow: 0 0 20px 20px rgb(255, 255, 255);
+    box-shadow: 0 0 10px 10px rgb(255, 255, 255);
 }
 
 #paintingInfo {
