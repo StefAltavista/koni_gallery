@@ -16,9 +16,19 @@
     display: none;
 }
 
-body {
+body,
+html {
+    height: 100%;
     margin: 0px;
     padding: 0;
+}
+
+img {
+    filter: brightness(1.05);
+    background: transparent;
+}
+a {
+    color: black;
 }
 
 #page {
@@ -29,7 +39,6 @@ body {
 }
 #body {
     height: 100%;
-    margin-top: 50px;
     display: flex;
     justify-content: center;
     flex: 1;
@@ -43,11 +52,12 @@ body {
 
 a {
     text-decoration: none;
+    background-color: transparent;
 }
 
 a p {
     color: rgb(130, 130, 130);
-    transition: 500ms;
+    background-color: transparent;
 }
 a p:hover {
     color: rgb(0, 0, 0);
@@ -84,4 +94,21 @@ body::-webkit-scrollbar {
 
 .loaded {
     opacity: 100%;
+}
+
+#loading {
+    background-color: transparent;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 10%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading p {
+    background-color: transparent;
 }

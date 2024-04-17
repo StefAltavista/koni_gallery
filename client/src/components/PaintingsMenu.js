@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../css/paintings.css";
 
 export default function PaintingsMenu({
-    setCategory,
+    setCollection,
     setSection,
     visible,
     setPaintingMenu,
@@ -15,7 +15,7 @@ export default function PaintingsMenu({
             >
                 <p
                     onClick={() => {
-                        setCategory("newPictures");
+                        setCollection("newPictures");
                         setSection("Paintings");
                         setPaintingMenu("");
                     }}
@@ -24,7 +24,7 @@ export default function PaintingsMenu({
                 </p>
                 <p
                     onClick={() => {
-                        setCategory("elementsOfBuilding");
+                        setCollection("elementsOfBuilding");
                         setSection("Paintings");
                         setPaintingMenu("");
                     }}

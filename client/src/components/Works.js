@@ -12,7 +12,7 @@ export default function Works({ files }) {
     setTimeout(() => setLoad("loaded"), 10);
     const [section, setSection] = useState("Book");
     const [paintingMenu, setPaintingMenu] = useState(false);
-    const [category, setCategory] = useState();
+    const [collection, setCollection] = useState();
 
     const { paintings, drawings, book } =
         browserName == "Safari" ? files.thumbnails.safari : files.thumbnails;
@@ -42,7 +42,7 @@ export default function Works({ files }) {
                 </p>
 
                 <PaintingsMenu
-                    setCategory={setCategory}
+                    setCollection={setCollection}
                     setSection={setSection}
                     visible={paintingMenu}
                     setPaintingMenu={setPaintingMenu}
@@ -61,8 +61,12 @@ export default function Works({ files }) {
                 </p>
             </div>
 
-            {section == "Paintings" && category && (
-                <Paintings files={paintings[category].files} key={category} />
+            {section == "Paintings" && collection && (
+                <Paintings
+                    files={paintings[collection].files}
+                    key={collection}
+                    collection={collection}
+                />
             )}
             {section == "Drawings" && <Drawings files={drawings.files} />}
             {section == "Book" && <Book files={book.files} />}

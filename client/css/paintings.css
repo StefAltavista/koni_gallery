@@ -4,7 +4,6 @@
     flex-direction: column;
     top: 90px;
     left: 50%;
-    /* width: 100%; */
     z-index: 1;
     transition: 400ms;
     overflow: hidden;
@@ -24,29 +23,66 @@
     background-color: rgb(127, 147, 154);
     color: white;
 }
-#paintings {
+.newPictures {
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
     flex-grow: inherit;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
-#paintings div {
+
+.newPictures div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
-#paintings div img {
+.newPictures div img {
     width: 60%;
+    transform: scale(0.9);
 }
-/* #paintings {
-    line-height: 10px;
-    -webkit-column-count: 5;
-    -webkit-column-gap: 0px;
-    -moz-column-count: 5;
-    -moz-column-gap: 0px;
-    column-count: 5;
-    column-gap: 15px;
-} */
+
+.painting-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.painting-item img {
+    height: 20%;
+}
+
+.elementsOfBuilding {
+    width: 100vw;
+}
+/* MASONRY */
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    padding: 10px;
+    max-width: 100vw;
+}
+.my-masonry-grid_column {
+    margin: 5px; /* gutter size */
+}
+
+/* Style your items */
+.my-masonry-grid_column img {
+    margin-bottom: 20px;
+    max-width: 80%;
+    object-fit: scale-down;
+    transform: scale(0.9);
+}
+
+@media (max-width: 800px) {
+    .my-masonry-grid {
+        margin-left: -15px; /* gutter size offset */
+    }
+    .my-masonry-grid_column {
+        padding-left: 15px; /* gutter size offset */
+    }
+    .my-masonry-grid_column img {
+        margin-bottom: 15px; /* space between items */
+    }
+}

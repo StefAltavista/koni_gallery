@@ -1,9 +1,10 @@
 #book {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    width: 90vw;
+
+    width: 100vw;
     top: -20px;
 }
 
@@ -13,15 +14,21 @@
 }
 #bookComponent {
     display: flex;
+    flex-direction: column;
+
     justify-content: center;
     align-items: center;
-    height: 90%;
+    height: 90vh;
     width: 90%;
 }
 .bookImg {
     object-fit: fill;
     padding: 0;
     cursor: grab;
+}
+.arrow {
+    margin: 20px;
+    transition: 500ms;
 }
 #comands {
     margin-top: -20px;
@@ -31,7 +38,7 @@
 
 .flip {
     cursor: pointer;
-    transition: 500ms;
+    transition: 100ms;
 }
 .flip:hover {
     color: rgb(48, 59, 149);

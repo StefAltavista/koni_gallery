@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ViewModal from "./ViewModal";
 import { browserName } from "react-device-detect";
 import "../../css/paintings.css";
+import Masonry from "react-masonry-css";
 
-export default function Paintings({ files }) {
+export default function Paintings({ files, collection }) {
+    collection = collection || "newPictures";
+
     const [source, setSource] = useState("");
     const [load, setLoad] = useState("loading");
 
@@ -15,31 +18,50 @@ export default function Paintings({ files }) {
 
         setSource(x);
     };
-    const closeModal = (e) => {
-        e.target.id == "modalBackground" || e.target.id == "close"
-            ? setSource(false)
-            : null;
+    const closeModal = () => {
+        setSource(false);
     };
+
+    const breakpoints = {
+        default: 3,
+        900: 2,
+    };
+
+    const renderImages = files
+        ? files.map((x, i) => (
+              <div
+                  key={i}
+                  onClick={() => openModal(x)}
+                  className="painting-item"
+              >
+                  <img
+                      src={x}
+                      alt={`Koni Grimm Painting ${i} from ${collection}`}
+                  />
+              </div>
+          ))
+        : null;
+
     return (
         <div
             id="paintings"
-            className={`toLoad ${load}`}
+            className={`toLoad ${load} ${collection}`}
             onLoad={() => setLoad("loaded")}
+            onScroll={(e) => handleScroll(e)}
         >
-            {files &&
-                files.map((x, i) => (
-                    <div key={i} onClick={() => openModal(x)}>
-                        <img src={x} />
-                    </div>
-                ))}
-            {source && (
-                <ViewModal
-                    file={source}
-                    closeModal={(e) => {
-                        closeModal(e);
-                    }}
-                />
+            {collection == "elementsOfBuilding" ? (
+                <Masonry
+                    breakpointCols={breakpoints}
+                    className="my-masonry-grid"
+                    columnClassName="my-masonry-grid_column"
+                >
+                    {renderImages}
+                </Masonry>
+            ) : (
+                renderImages
             )}
+
+            {source && <ViewModal file={source} closeModal={closeModal} />}
         </div>
     );
 }

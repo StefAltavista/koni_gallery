@@ -2,17 +2,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100vw;
+    /* height: 100vh -10px; */
 }
 #sections {
     color: rgb(130, 130, 130);
     display: flex;
     width: 100%;
     justify-content: center;
+
+    /* position: fixed; */
+    /* background-color: transparent; */
 }
 #sections p {
     cursor: pointer;
     padding: 2px;
     margin-right: 10px;
     transition: 500ms;
+    background-color: transparent;
 }
