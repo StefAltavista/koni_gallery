@@ -1,5 +1,5 @@
 #navBar {
-    /* position: fixed; */
+    /* position: relative; */
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -18,10 +18,29 @@
     color: rgb(130, 130, 130);
 }
 
-.menuLinks {
-    display: flex;
-    justify-content: center;
-}
-.menuLinks a {
+#menuLinks a {
     margin-right: 10px;
+}
+
+.otherPageLayout {
+    display: flex;
+    justify-content: space-around;
+}
+.homePageLayout {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 45%;
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .homePageLayout {
+        font-size: 17px;
+    }
 }

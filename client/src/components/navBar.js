@@ -11,9 +11,9 @@ export default function NavBar() {
 
     if (locate == "") {
         gsap.fromTo(
-            ".menuLinks",
+            "#menuLinks",
             { opacity: "0" },
-            { opacity: "1", duration: 2, delay: 1 }
+            { opacity: "1", duration: 1, delay: 1 }
         );
         conditionalMenu = {
             position: "absolute",
@@ -39,7 +39,11 @@ export default function NavBar() {
             <Link to="/">
                 <h1 id="title">KONI GRIMM</h1>
             </Link>
-            <div className="menuLinks" style={conditionalMenu}>
+            <div
+                id="menuLinks"
+                className={locate == "" ? "homePageLayout" : "otherPageLayout"}
+                // style={conditionalMenu}
+            >
                 {location &&
                     menu.map((x) => {
                         return (

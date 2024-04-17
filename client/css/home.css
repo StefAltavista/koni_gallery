@@ -10,11 +10,11 @@
 .imageLeaving {
     opacity: 0;
     filter: blur(10px);
-    transition: 1500ms;
+    transition: 1000ms;
 }
 
 .imageComing {
     opacity: 1;
     filter: blur(0px);
-    transition: 1500ms;
+    transition: 1000ms;
 }
