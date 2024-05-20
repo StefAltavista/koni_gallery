@@ -1,10 +1,8 @@
 #navBar {
-    /* position: relative; */
     width: 100%;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    /* align-items: flex-start; */
     margin: 0;
     z-index: 1;
 }
@@ -35,12 +33,17 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.homePageLayout a p {
+    color: rgb(0, 0, 0) !important;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 5px;
 }
 
 @media (max-width: 800px) {
-    .homePageLayout {
+    /* .homePageLayout {
         font-size: 17px;
-    }
+    } */
 }

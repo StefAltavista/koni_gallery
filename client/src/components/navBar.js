@@ -2,30 +2,22 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../../css/navBar.css";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function NavBar() {
     const locate = useLocation().pathname.replace("/", "");
     const menu = ["Works", "Info", "Exhibitions"];
 
-    let conditionalMenu;
-
-    if (locate == "") {
-        gsap.fromTo(
-            "#menuLinks",
-            { opacity: "0" },
-            { opacity: "1", duration: 1, delay: 1 }
-        );
-        conditionalMenu = {
-            position: "absolute",
-            bottom: "45%",
-            fontSize: "30px",
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-around",
-            backgroundColor: "rgba(0,0,0,0.2)",
-            color: "white",
-        };
-    }
+    useGSAP(
+        () => {
+            gsap.fromTo(
+                "#menuLinks",
+                { opacity: "0" },
+                { opacity: "1", duration: 1, delay: 1 }
+            );
+        },
+        { dependencies: [] }
+    );
 
     return (
         <div
@@ -41,8 +33,11 @@ export default function NavBar() {
             </Link>
             <div
                 id="menuLinks"
-                className={locate == "" ? "homePageLayout" : "otherPageLayout"}
-                // style={conditionalMenu}
+                className={
+                    locate == "" && window.innerWidth > 800
+                        ? "homePageLayout"
+                        : "otherPageLayout"
+                }
             >
                 {location &&
                     menu.map((x) => {
@@ -56,7 +51,9 @@ export default function NavBar() {
                                             : "notSelected"
                                     }
                                     style={
-                                        locate == "" ? { color: "white" } : null
+                                        locate == "" && window.innerWidth > 800
+                                            ? { color: "white" }
+                                            : null
                                     }
                                 >{`${x}`}</p>
                             </Link>

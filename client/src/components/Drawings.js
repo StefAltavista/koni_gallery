@@ -8,20 +8,14 @@ export default function Drawings({ files }) {
         setLoad("loaded");
     };
     const [inView, setInView] = useState(0);
-    const gallery = useRef();
-
+    let gallery = createRef();
     const drawing = [];
 
-    // for (let i in files) {
-    //     drawing[i] = useRef();
-    // }
     const scroll = (n) => {
         setV(
             Math.round(gallery.current.scrollLeft / gallery.current.clientWidth)
         );
-        // let v = Math.round(
-        //     gallery.current.scrollLeft / gallery.current.clientWidth
-        // );
+
         if (n == "mouse") {
             n = v;
             setInView(v);
@@ -46,7 +40,7 @@ export default function Drawings({ files }) {
     }, [inView]);
 
     return (
-        <div id="drawings" ref={page}>
+        <div id="drawings">
             <div
                 ref={gallery}
                 id="drawingsGallery"
