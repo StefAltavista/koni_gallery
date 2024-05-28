@@ -43,25 +43,26 @@ export default function Paintings({ files, collection }) {
         : null;
 
     return (
-        <div
-            id="paintings"
-            className={`toLoad ${load} ${collection}`}
-            onLoad={() => setLoad("loaded")}
-            onScroll={(e) => handleScroll(e)}
-        >
-            {collection == "elementsOfBuilding" ? (
-                <Masonry
-                    breakpointCols={breakpoints}
-                    className="my-masonry-grid"
-                    columnClassName="my-masonry-grid_column"
-                >
-                    {renderImages}
-                </Masonry>
-            ) : (
-                renderImages
-            )}
-
+        <>
             {source && <ViewModal file={source} closeModal={closeModal} />}
-        </div>
+            <div
+                id="paintings"
+                className={`toLoad ${load} ${collection}`}
+                onLoad={() => setLoad("loaded")}
+                onScroll={(e) => handleScroll(e)}
+            >
+                {collection == "elementsOfBuilding" ? (
+                    <Masonry
+                        breakpointCols={breakpoints}
+                        className="my-masonry-grid"
+                        columnClassName="my-masonry-grid_column"
+                    >
+                        {renderImages}
+                    </Masonry>
+                ) : (
+                    renderImages
+                )}
+            </div>
+        </>
     );
 }

@@ -16,8 +16,8 @@
 #viewModal {
     background-color: rgba(255, 255, 255, 0);
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,11 +25,12 @@
     object-fit: scale-down;
     flex-direction: column;
 }
-#viewModal img {
+
+.modalImg {
     background-color: transparent;
     object-fit: scale-down;
-    max-width: 90%;
-    max-height: 97%;
+    max-width: 95%;
+    max-height: 95%;
     transition: 1s;
     box-shadow: 0 0 10px 10px rgb(255, 255, 255);
 }
