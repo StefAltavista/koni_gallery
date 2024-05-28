@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import "../../css/exhibitions.css";
-export default function Exhibitions() {
+import ViewModal from "./ViewModal";
+
+export default function Exhibitions({ files }) {
     const [load, setLoad] = useState("loading");
+    const [toggleModal, setToggleModal] = useState(false);
+
+    const schulzStuebner = files.exhibitions.schulzStuebner.files;
+    const excuseMeExhibit = files.exhibitions.excuseMeExhibit.files;
+
     setTimeout(() => setLoad("loaded"), 10);
+
     return (
         <div id="exhibitions" className={`toLoad ${load}`}>
             <p>UPCOMING</p>
@@ -35,16 +43,44 @@ export default function Exhibitions() {
                 Schulz- Stübner Preis, group show, Foyer of Universität der
                 Künste Berlin
             </p>
+            <div>
+                {schulzStuebner.map((x, idx) => (
+                    <img
+                        src={x}
+                        key={idx}
+                        alt="Koni Grim Schulz Stuebner Preis"
+                        onClick={() => setToggleModal(x)}
+                        className="exhibitionImg"
+                    />
+                ))}
+            </div>
             <p>
                 Excuse me I’m looking for the Rabbit Hole, group show, CULTERIM
                 Berlin
             </p>
+            <div>
+                {excuseMeExhibit.map((x, idx) => (
+                    <img
+                        src={x}
+                        key={idx}
+                        alt="Koni Grim Exhibitions"
+                        onClick={() => setToggleModal(x)}
+                        className="exhibitionImg"
+                    />
+                ))}
+            </div>
             <br></br>
             <p>2020</p>
             <p>
                 Institut für unvorhergesehene Zusammenarbeit with
                 Gintersdorfer/Klaßen, Floating University, Berlin
             </p>
+            {toggleModal && (
+                <ViewModal
+                    file={toggleModal}
+                    closeModal={() => setToggleModal(false)}
+                />
+            )}
         </div>
     );
 }

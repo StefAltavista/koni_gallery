@@ -4,6 +4,20 @@
         "/images/arrowR.png",
         "/images/favicon.ico"
     ],
+    "exhibitions": {
+        "schulzStuebner": {
+            "files": [
+                "/images/exhibitions/schulzStuebner/01.jpeg",
+                "/images/exhibitions/schulzStuebner/02.jpeg",
+                "/images/exhibitions/schulzStuebner/03.jpeg",
+                "/images/exhibitions/schulzStuebner/04.jpeg",
+                "/images/exhibitions/schulzStuebner/05.jpeg"
+            ]
+        },
+        "excuseMeExhibit": {
+            "files": ["/images/exhibitions/excuseMeExhibit/flyer.jpg"]
+        }
+    },
     "originals": {
         "book": {
             "files": [

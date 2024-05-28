@@ -60,7 +60,7 @@ export default function App() {
                                 path="/Exhibitions"
                                 element={
                                     <Suspense>
-                                        <Exhibitions />
+                                        <Exhibitions files={files} />
                                     </Suspense>
                                 }
                             />

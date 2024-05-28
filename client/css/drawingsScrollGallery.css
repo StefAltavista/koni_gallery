@@ -1,0 +1,31 @@
+#drawings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#drawingsGallery {
+    display: flex;
+    height: 80vh;
+    width: 95vw;
+    overflow: scroll;
+    transition: 1s;
+    scroll-snap-type: x mandatory;
+    scroll-snap-points-y: repeat(75vw);
+}
+.frame {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    scroll-snap-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.frame img {
+    height: 85%;
+    width: 100%;
+    object-fit: scale-down;
+}

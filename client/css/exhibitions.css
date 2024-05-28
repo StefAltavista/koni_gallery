@@ -8,3 +8,7 @@
 .line {
     border-bottom: 1px dotted rgb(129, 129, 129);
 }
+.exhibitionImg {
+    height: 150px;
+    margin-right: 5px;
+}

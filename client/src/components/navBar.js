@@ -42,7 +42,7 @@ export default function NavBar() {
                 {location &&
                     menu.map((x) => {
                         return (
-                            <Link to={`/${x}`} key={x}>
+                            <Link to={`/${x.toLocaleLowerCase()}`} key={x}>
                                 <p
                                     className={
                                         locate.toLocaleLowerCase() ==
