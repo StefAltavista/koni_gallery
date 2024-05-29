@@ -12,7 +12,7 @@ export default function ViewModal({ file, closeModal, children }) {
     return (
         <div id="modalBackground" onClick={closeModal}>
             <div id="viewModal" onClick={closeModal}>
-                {load == "loading" && <Loading />}
+                {load == "loading" && !children && <Loading />}
                 {file && (
                     <img
                         src={file}
@@ -22,7 +22,7 @@ export default function ViewModal({ file, closeModal, children }) {
                         onClick={closeModal}
                     />
                 )}
-                {children && children && loaded}
+                {children && children}
                 {/* <div
                     id="paintingInfo"
                     onClick={closeModal}

@@ -1,12 +1,13 @@
-#drawings {
+#scrollGalleryContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+    background-color: transparent;
 }
 
-#drawingsGallery {
+#scrollGallery {
     display: flex;
     height: 80vh;
     width: 95vw;
@@ -14,18 +15,29 @@
     transition: 1s;
     scroll-snap-type: x mandatory;
     scroll-snap-points-y: repeat(75vw);
+    background-color: transparent;
 }
 .frame {
     flex-shrink: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     scroll-snap-align: center;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
 }
 
 .frame img {
-    height: 85%;
-    width: 100%;
+    max-height: 95%;
+    max-width: 95%;
+
     object-fit: scale-down;
+    margin: 0px 0px;
+    /* background-color: white; */
+    box-shadow: 0 0 10px 10px rgb(255, 255, 255);
+}
+
+.arrows {
+    background-color: transparent;
 }

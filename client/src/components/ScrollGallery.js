@@ -1,13 +1,13 @@
 import React, { createRef, useEffect, useRef, useState } from "react";
 import { isMobile } from "react-device-detect";
-import "../../css/drawingsScrollGallery.css";
+import "../../css/scrollGallery.css";
 
-export default function DrawingsScrollGallery({ files, initialView }) {
+export default function ScrollGallery({ files, initialView }) {
     const [load, setLoad] = useState("loading");
     const [firstLoad, setFirstLoad] = useState(true);
     const [v, setV] = useState(initialView);
     const [inView, setInView] = useState(initialView);
-    const drawing = [];
+    const image = [];
 
     const loaded = () => {
         setLoad("loaded");
@@ -37,13 +37,13 @@ export default function DrawingsScrollGallery({ files, initialView }) {
     useEffect(() => {
         if (firstLoad) {
             setFirstLoad(false);
-            drawing[initialView].current.scrollIntoView({
+            image[initialView].current.scrollIntoView({
                 behavior: "instant",
                 block: "end",
             });
         } else {
-            drawing[inView]
-                ? drawing[inView].current.scrollIntoView({
+            image[inView]
+                ? image[inView].current.scrollIntoView({
                       behavior: "smooth",
                       block: "end",
                   })
@@ -52,10 +52,10 @@ export default function DrawingsScrollGallery({ files, initialView }) {
     }, [inView]);
 
     return (
-        <div id="drawings">
+        <div id="scrollGalleryContainer">
             <div
                 ref={gallery}
-                id="drawingsGallery"
+                id="scrollGallery"
                 onWheel={() => {
                     setV(
                         Math.round(
@@ -69,7 +69,7 @@ export default function DrawingsScrollGallery({ files, initialView }) {
                     <div key={idx} className="frame">
                         <img
                             src={x}
-                            ref={(drawing[idx] = createRef())}
+                            ref={(image[idx] = createRef())}
                             loading="eager"
                             className={`toLoad ${load}`}
                             onLoad={loaded}
@@ -79,6 +79,7 @@ export default function DrawingsScrollGallery({ files, initialView }) {
             </div>
             {!isMobile && (
                 <div
+                    className="arrows"
                     onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();

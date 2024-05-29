@@ -22,11 +22,11 @@ export default function NavBar() {
     return (
         <div
             id="navBar"
-            style={
-                locate != ""
-                    ? { borderBottom: "1px dotted rgb(180, 180, 180)" }
-                    : null
-            }
+            // style={
+            //     locate != ""
+            //         ? { borderBottom: "1px dotted rgb(180, 180, 180)" }
+            //         : null
+            // }
         >
             <Link to="/">
                 <h1 id="title">KONI GRIMM</h1>
@@ -34,9 +34,10 @@ export default function NavBar() {
             <div
                 id="menuLinks"
                 className={
-                    locate == "" && window.innerWidth > 800
-                        ? "homePageLayout"
-                        : "otherPageLayout"
+                    "otherPageLayout"
+                    // locate == "" && window.innerWidth > 800
+                    //     ? "homePageLayout"
+                    //     : "otherPageLayout"
                 }
             >
                 {location &&
@@ -50,11 +51,11 @@ export default function NavBar() {
                                             ? "selected"
                                             : "notSelected"
                                     }
-                                    style={
-                                        locate == "" && window.innerWidth > 800
-                                            ? { color: "white" }
-                                            : null
-                                    }
+                                    // style={
+                                    //     locate == "" && window.innerWidth > 800
+                                    //         ? { color: "white" }
+                                    //         : null
+                                    // }
                                 >{`${x}`}</p>
                             </Link>
                         );
