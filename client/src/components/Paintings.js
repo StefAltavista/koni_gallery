@@ -5,8 +5,6 @@ import "../../css/paintings.css";
 import Masonry from "react-masonry-css";
 
 export default function Paintings({ files, collection }) {
-    collection = collection || "newPictures";
-
     const [source, setSource] = useState("");
     const [load, setLoad] = useState("loading");
 

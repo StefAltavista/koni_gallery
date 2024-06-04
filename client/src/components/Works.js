@@ -10,9 +10,9 @@ import Book from "./Book";
 export default function Works({ files }) {
     const [load, setLoad] = useState("loading");
     setTimeout(() => setLoad("loaded"), 10);
-    const [section, setSection] = useState("Book");
+    const [section, setSection] = useState("Paintings");
     const [paintingMenu, setPaintingMenu] = useState(false);
-    const [collection, setCollection] = useState();
+    const [collection, setCollection] = useState("newPictures");
 
     const { paintings, drawings, book } =
         browserName == "Safari" ? files.thumbnails.safari : files.thumbnails;
@@ -64,7 +64,6 @@ export default function Works({ files }) {
             {section == "Paintings" && collection && (
                 <Paintings
                     files={paintings[collection].files}
-                    key={collection}
                     collection={collection}
                 />
             )}
