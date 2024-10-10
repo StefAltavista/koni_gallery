@@ -29,7 +29,7 @@ export default function NavBar() {
             // }
         >
             <Link to="/">
-                <h1 id="title">KONI GRIMM</h1>
+                <h1 id="title">KONSTANTIN GRIMM</h1>
             </Link>
             <div
                 id="menuLinks"

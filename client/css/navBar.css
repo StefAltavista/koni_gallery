@@ -13,7 +13,8 @@
     border: 1px dotted rgb(180, 180, 180);
     margin: 10px;
     font-size: 15px;
-    color: rgb(130, 130, 130);
+    /* color: rgb(130, 130, 130); */
+    color: black;
 }
 
 #menuLinks a {

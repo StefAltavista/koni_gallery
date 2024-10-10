@@ -6,7 +6,8 @@
     /* height: 100vh -10px; */
 }
 #sections {
-    color: rgb(130, 130, 130);
+    /* color: rgb(130, 130, 130); */
+    color: black;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -20,4 +21,8 @@
     margin-right: 10px;
     transition: 500ms;
     background-color: transparent;
+}
+
+.selected {
+    border-bottom: 1px dotted rgb(147, 147, 147);
 }

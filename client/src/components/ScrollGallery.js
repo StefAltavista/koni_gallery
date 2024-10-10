@@ -1,5 +1,5 @@
 import React, { createRef, useEffect, useRef, useState } from "react";
-import { isMobile } from "react-device-detect";
+import { browserName, isMobile } from "react-device-detect";
 import "../../css/scrollGallery.css";
 
 export default function ScrollGallery({ files, initialView }) {
@@ -65,17 +65,25 @@ export default function ScrollGallery({ files, initialView }) {
                     );
                 }}
             >
-                {files.map((x, idx) => (
-                    <div key={idx} className="frame">
-                        <img
-                            src={x}
-                            ref={(image[idx] = createRef())}
-                            loading="eager"
-                            className={`toLoad ${load}`}
-                            onLoad={loaded}
-                        />
-                    </div>
-                ))}
+                {files.map((x, idx) => {
+                    const folder =
+                        browserName == "Safari"
+                            ? "thumbnails/safari"
+                            : "thumbnails";
+                    x = x.replace(folder, "originals").split(".")[0] + ".JPG";
+
+                    return (
+                        <div key={idx} className="frame">
+                            <img
+                                src={x}
+                                ref={(image[idx] = createRef())}
+                                loading="eager"
+                                className={`toLoad ${load}`}
+                                onLoad={loaded}
+                            />
+                        </div>
+                    );
+                })}
             </div>
             {!isMobile && (
                 <div

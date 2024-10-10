@@ -81,6 +81,21 @@
                 "/images/originals/drawings/D19.jpeg"
             ]
         },
+        "graphics": {
+            "files": [
+                "/images/originals/graphics/g01.jpeg",
+                "/images/originals/graphics/g02.jpeg",
+                "/images/originals/graphics/g03.jpeg",
+                "/images/originals/graphics/g04.jpeg",
+                "/images/originals/graphics/g05.jpeg",
+                "/images/originals/graphics/g06.jpeg",
+                "/images/originals/graphics/g07.jpeg",
+                "/images/originals/graphics/g08.jpeg",
+                "/images/originals/graphics/g09.jpeg",
+                "/images/originals/graphics/g10.jpeg"
+            ]
+        },
+
         "paintings": {
             "elementsOfBuilding": {
                 "files": [
@@ -121,7 +136,6 @@
                     "/images/originals/paintings/newPictures/04.JPG",
                     "/images/originals/paintings/newPictures/05.JPG",
                     "/images/originals/paintings/newPictures/06.JPG",
-                    "/images/originals/paintings/newPictures/07.JPG",
                     "/images/originals/paintings/newPictures/08.JPG",
                     "/images/originals/paintings/newPictures/09.JPG",
                     "/images/originals/paintings/newPictures/10.JPG",
@@ -195,6 +209,20 @@
                 "/images/thumbnails/drawings/D19.webp"
             ]
         },
+        "graphics": {
+            "files": [
+                "/images/thumbnails/graphics/g01.webp",
+                "/images/thumbnails/graphics/g02.webp",
+                "/images/thumbnails/graphics/g03.webp",
+                "/images/thumbnails/graphics/g04.webp",
+                "/images/thumbnails/graphics/g05.webp",
+                "/images/thumbnails/graphics/g06.webp",
+                "/images/thumbnails/graphics/g07.webp",
+                "/images/thumbnails/graphics/g08.webp",
+                "/images/thumbnails/graphics/g09.webp",
+                "/images/thumbnails/graphics/g10.webp"
+            ]
+        },
         "paintings": {
             "elementsOfBuilding": {
                 "files": [
@@ -235,7 +263,6 @@
                     "/images/thumbnails/paintings/newPictures/04.webp",
                     "/images/thumbnails/paintings/newPictures/05.webp",
                     "/images/thumbnails/paintings/newPictures/06.webp",
-                    "/images/thumbnails/paintings/newPictures/07.webp",
                     "/images/thumbnails/paintings/newPictures/08.webp",
                     "/images/thumbnails/paintings/newPictures/09.webp",
                     "/images/thumbnails/paintings/newPictures/10.webp",
@@ -308,6 +335,20 @@
                     "/images/thumbnails/safari/drawings/D19.jpeg"
                 ]
             },
+            "graphics": {
+                "files": [
+                    "/images/thumbnails/safari/graphics/g01.jpeg",
+                    "/images/thumbnails/safari/graphics/g02.jpeg",
+                    "/images/thumbnails/safari/graphics/g03.jpeg",
+                    "/images/thumbnails/safari/graphics/g04.jpeg",
+                    "/images/thumbnails/safari/graphics/g05.jpeg",
+                    "/images/thumbnails/safari/graphics/g06.jpeg",
+                    "/images/thumbnails/safari/graphics/g07.jpeg",
+                    "/images/thumbnails/safari/graphics/g08.jpeg",
+                    "/images/thumbnails/safari/graphics/g09.jpeg",
+                    "/images/thumbnails/safari/graphics/g10.jpeg"
+                ]
+            },
             "paintings": {
                 "elementsOfBuilding": {
                     "files": [
@@ -348,7 +389,6 @@
                         "/images/thumbnails/safari/paintings/newPictures/04.png",
                         "/images/thumbnails/safari/paintings/newPictures/05.png",
                         "/images/thumbnails/safari/paintings/newPictures/06.png",
-                        "/images/thumbnails/safari/paintings/newPictures/07.png",
                         "/images/thumbnails/safari/paintings/newPictures/08.png",
                         "/images/thumbnails/safari/paintings/newPictures/09.png",
                         "/images/thumbnails/safari/paintings/newPictures/10.png",

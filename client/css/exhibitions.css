@@ -12,3 +12,14 @@
     height: 150px;
     margin-right: 5px;
 }
+
+.portfolio_button a {
+    display: flex;
+    align-items: center;
+}
+
+.pdf_icon {
+    width: 30px;
+    margin-right: 5px;
+    /* margin-top: 20px; */
+}

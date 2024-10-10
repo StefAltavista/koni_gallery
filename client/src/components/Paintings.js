@@ -4,7 +4,8 @@ import { browserName } from "react-device-detect";
 import "../../css/paintings.css";
 import Masonry from "react-masonry-css";
 
-export default function Paintings({ files, collection }) {
+export default function Paintings({ files }) {
+    const [collection, setCollection] = useState("newPictures");
     const [source, setSource] = useState("");
     const [load, setLoad] = useState("loading");
 
@@ -25,24 +26,38 @@ export default function Paintings({ files, collection }) {
         900: 2,
     };
 
-    const renderImages = files
-        ? files.map((x, i) => (
-              <div
-                  key={i}
-                  onClick={() => openModal(x)}
-                  className="painting-item"
-              >
-                  <img
-                      src={x}
-                      alt={`Koni Grimm Painting ${i} from ${collection}`}
-                  />
-              </div>
-          ))
-        : null;
+    const renderImages = () => {
+        files[collection].files.map((x, i) => (
+            <div key={i} onClick={() => openModal(x)} className="painting-item">
+                <img
+                    src={x}
+                    alt={`Koni Grimm Painting ${i} from ${collection}`}
+                />
+            </div>
+        ));
+    };
 
     return (
         <>
             {source && <ViewModal file={source} closeModal={closeModal} />}
+            {/* <div className="line"></div> */}
+
+            <div className="paintings_collection_menu">
+                <p
+                    className={collection == "newPictures" ? "selected" : ""}
+                    onClick={() => setCollection("newPictures")}
+                >
+                    new pictures
+                </p>
+                <p
+                    className={
+                        collection == "elementsOfBuilding" ? "selected" : ""
+                    }
+                    onClick={() => setCollection("elementsOfBuilding")}
+                >
+                    elements of building
+                </p>
+            </div>
             <div
                 id="paintings"
                 className={`toLoad ${load} ${collection}`}
@@ -55,10 +70,32 @@ export default function Paintings({ files, collection }) {
                         className="my-masonry-grid"
                         columnClassName="my-masonry-grid_column"
                     >
-                        {renderImages}
+                        {files[collection].files.map((x, i) => (
+                            <div
+                                key={i}
+                                onClick={() => openModal(x)}
+                                className="painting-item"
+                            >
+                                <img
+                                    src={x}
+                                    alt={`Koni Grimm Painting ${i} from ${collection}`}
+                                />
+                            </div>
+                        ))}
                     </Masonry>
                 ) : (
-                    renderImages
+                    files[collection].files.map((x, i) => (
+                        <div
+                            key={i}
+                            onClick={() => openModal(x)}
+                            className="painting-item"
+                        >
+                            <img
+                                src={x}
+                                alt={`Koni Grimm Painting ${i} from ${collection}`}
+                            />
+                        </div>
+                    ))
                 )}
             </div>
         </>

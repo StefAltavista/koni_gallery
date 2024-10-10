@@ -86,3 +86,19 @@
         margin-bottom: 15px; /* space between items */
     }
 }
+/* .line {
+    border-bottom: 1px dotted rgb(255, 255, 255);
+    padding-bottom: 10px;
+    min-width: 70%;
+} */
+.paintings_collection_menu {
+    display: flex;
+}
+.paintings_collection_menu p {
+    font-size: 14px;
+    margin: 10px;
+    cursor: pointer;
+}
+.paintings_collection_menu p:hover {
+    border-bottom: 1px dotted rgb(147, 147, 147);
+}

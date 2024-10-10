@@ -57,7 +57,7 @@ a {
 }
 
 a p {
-    color: rgb(130, 130, 130);
+    color: black;
     background-color: transparent;
 }
 a p:hover {
@@ -67,7 +67,9 @@ a p:hover {
 .selected {
     color: rgb(0, 0, 0);
 }
-
+.line {
+    border-bottom: 1px dotted rgb(129, 129, 129);
+}
 .arrow {
     width: 20px;
     /* margin: 25px; */

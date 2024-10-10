@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "../../css/works.css";
 import { browserName } from "react-device-detect";
-
-import PaintingsMenu from "./PaintingsMenu";
 import Paintings from "./Paintings";
 import Drawings from "./Drawings";
 import Book from "./Book";
@@ -11,10 +9,9 @@ export default function Works({ files }) {
     const [load, setLoad] = useState("loading");
     setTimeout(() => setLoad("loaded"), 10);
     const [section, setSection] = useState("Paintings");
-    const [paintingMenu, setPaintingMenu] = useState(false);
     const [collection, setCollection] = useState("newPictures");
 
-    const { paintings, drawings, book } =
+    const { paintings, drawings, book, graphics } =
         browserName == "Safari" ? files.thumbnails.safari : files.thumbnails;
 
     return (
@@ -32,7 +29,7 @@ export default function Works({ files }) {
 
                 <p
                     onClick={() => {
-                        setPaintingMenu(!paintingMenu);
+                        setSection("Paintings");
                     }}
                     className={
                         section == "Paintings" ? "selected" : "notSelected"
@@ -41,12 +38,12 @@ export default function Works({ files }) {
                     Paintings
                 </p>
 
-                <PaintingsMenu
+                {/* <PaintingsMenu
                     setCollection={setCollection}
                     setSection={setSection}
                     visible={paintingMenu}
                     setPaintingMenu={setPaintingMenu}
-                />
+                /> */}
 
                 <p
                     onClick={() => {
@@ -59,16 +56,23 @@ export default function Works({ files }) {
                 >
                     Drawings
                 </p>
+                <p
+                    onClick={() => {
+                        setSection("Graphics");
+                        setPaintingMenu(false);
+                    }}
+                    className={
+                        section == "Graphics" ? "selected" : "notSelected"
+                    }
+                >
+                    Lithography
+                </p>
             </div>
 
-            {section == "Paintings" && collection && (
-                <Paintings
-                    files={paintings[collection].files}
-                    collection={collection}
-                />
-            )}
+            {section == "Paintings" && <Paintings files={paintings} />}
             {section == "Drawings" && <Drawings files={drawings.files} />}
             {section == "Book" && <Book files={book.files} />}
+            {section == "Graphics" && <Drawings files={graphics.files} />}
         </div>
     );
 }

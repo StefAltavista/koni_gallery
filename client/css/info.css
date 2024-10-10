@@ -8,3 +8,26 @@
 .line {
     border-bottom: 1px dotted rgb(129, 129, 129);
 }
+
+#info p {
+    word-spacing: 6px;
+    letter-spacing: 2px;
+}
+
+.more_info p {
+    word-spacing: 0px !important;
+    letter-spacing: 0px !important;
+}
+
+.lang_select {
+    display: flex;
+}
+.lang_select p {
+    cursor: pointer;
+}
+
+.lang_select p:nth-child(2) {
+    cursor: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}

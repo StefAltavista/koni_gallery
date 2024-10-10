@@ -1,8 +1,7 @@
-import React, { createRef, useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import "../../css/drawings.css";
 import ScrollGallery from "./ScrollGallery";
 import ViewModal from "./ViewModal";
-import Masonry from "react-masonry-css";
 
 export default function Drawings({ files }) {
     const [load, setLoad] = useState("loading");
@@ -11,10 +10,7 @@ export default function Drawings({ files }) {
     const loaded = () => {
         setLoad("loaded");
     };
-    const breakpoints = {
-        default: 5,
-        900: 2,
-    };
+
     return (
         <>
             <div id="drawings">
@@ -27,7 +23,7 @@ export default function Drawings({ files }) {
                             setInitialView(idx);
                         }}
                     >
-                        <img src={x} onLoad={loaded} />
+                        <img src={x} onLoad={loaded} className="litho" />
                     </div>
                 ))}
             </div>
