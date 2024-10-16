@@ -9,7 +9,6 @@ export default function Works({ files }) {
     const [load, setLoad] = useState("loading");
     setTimeout(() => setLoad("loaded"), 10);
     const [section, setSection] = useState("Paintings");
-    const [collection, setCollection] = useState("newPictures");
 
     const { paintings, drawings, book, graphics } =
         browserName == "Safari" ? files.thumbnails.safari : files.thumbnails;
@@ -20,7 +19,6 @@ export default function Works({ files }) {
                 <p
                     onClick={() => {
                         setSection("Book");
-                        setPaintingMenu(false);
                     }}
                     className={section == "Book" ? "selected" : "notSelected"}
                 >
@@ -42,13 +40,11 @@ export default function Works({ files }) {
                     setCollection={setCollection}
                     setSection={setSection}
                     visible={paintingMenu}
-                    setPaintingMenu={setPaintingMenu}
-                /> */}
+                              /> */}
 
                 <p
                     onClick={() => {
                         setSection("Drawings");
-                        setPaintingMenu(false);
                     }}
                     className={
                         section == "Drawings" ? "selected" : "notSelected"
@@ -59,7 +55,6 @@ export default function Works({ files }) {
                 <p
                     onClick={() => {
                         setSection("Graphics");
-                        setPaintingMenu(false);
                     }}
                     className={
                         section == "Graphics" ? "selected" : "notSelected"

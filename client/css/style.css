@@ -115,3 +115,11 @@ body::-webkit-scrollbar {
 #loading p {
     background-color: transparent;
 }
+
+.selected {
+    border-bottom: 1px dotted rgb(147, 147, 147);
+}
+
+.notSelected {
+    color: rgb(162, 162, 162);
+}

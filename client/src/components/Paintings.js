@@ -40,18 +40,21 @@ export default function Paintings({ files }) {
     return (
         <>
             {source && <ViewModal file={source} closeModal={closeModal} />}
-            {/* <div className="line"></div> */}
 
             <div className="paintings_collection_menu">
                 <p
-                    className={collection == "newPictures" ? "selected" : ""}
+                    className={
+                        collection == "newPictures" ? "selected" : "notSelected"
+                    }
                     onClick={() => setCollection("newPictures")}
                 >
                     new pictures
                 </p>
                 <p
                     className={
-                        collection == "elementsOfBuilding" ? "selected" : ""
+                        collection == "elementsOfBuilding"
+                            ? "selected"
+                            : "notSelected"
                     }
                     onClick={() => setCollection("elementsOfBuilding")}
                 >

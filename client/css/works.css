@@ -11,6 +11,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
 
     /* position: fixed; */
     /* background-color: transparent; */
@@ -21,8 +22,11 @@
     margin-right: 10px;
     transition: 500ms;
     background-color: transparent;
+    font-size: ;
 }
 
-.selected {
-    border-bottom: 1px dotted rgb(147, 147, 147);
+@media only screen and (max-width: 700px) {
+    #sections p {
+        font-size: 15px;
+    }
 }

@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 export default function NavBar() {
     const locate = useLocation().pathname.replace("/", "");
     const menu = ["Works", "Info", "Exhibitions"];
-
+    const [openMenu, setOpenMenu] = useState(false);
     useGSAP(
         () => {
             gsap.fromTo(
@@ -19,48 +19,55 @@ export default function NavBar() {
         { dependencies: [] }
     );
 
+    const menuLinks = menu.map((x) => {
+        return (
+            <Link
+                to={`/${x.toLocaleLowerCase()}`}
+                key={x}
+                onClick={() => setOpenMenu(false)}
+            >
+                <p
+                    className={
+                        locate.toLocaleLowerCase() == x.toLocaleLowerCase()
+                            ? "selected"
+                            : "notSelected"
+                    }
+                >{`${x}`}</p>
+            </Link>
+        );
+    });
     return (
-        <div
-            id="navBar"
-            // style={
-            //     locate != ""
-            //         ? { borderBottom: "1px dotted rgb(180, 180, 180)" }
-            //         : null
-            // }
-        >
+        <div id="navBar">
             <Link to="/">
                 <h1 id="title">KONSTANTIN GRIMM</h1>
             </Link>
             <div
-                id="menuLinks"
-                className={
-                    "otherPageLayout"
-                    // locate == "" && window.innerWidth > 800
-                    //     ? "homePageLayout"
-                    //     : "otherPageLayout"
-                }
+                id="menuIcon"
+                onClick={() => {
+                    setOpenMenu(!openMenu);
+                    console.log(openMenu);
+                }}
+                className={openMenu ? "openMenu" : "closeMenu"}
             >
-                {location &&
-                    menu.map((x) => {
-                        return (
-                            <Link to={`/${x.toLocaleLowerCase()}`} key={x}>
-                                <p
-                                    className={
-                                        locate.toLocaleLowerCase() ==
-                                        x.toLocaleLowerCase()
-                                            ? "selected"
-                                            : "notSelected"
-                                    }
-                                    // style={
-                                    //     locate == "" && window.innerWidth > 800
-                                    //         ? { color: "white" }
-                                    //         : null
-                                    // }
-                                >{`${x}`}</p>
-                            </Link>
-                        );
-                    })}
-            </div>{" "}
+                <div></div>
+            </div>
+            {openMenu && (
+                <div
+                    id="backgroundoverlay"
+                    onClick={() => setOpenMenu(false)}
+                ></div>
+            )}
+            {openMenu && (
+                <div
+                    id="dropdown"
+                    className={openMenu ? "openDropdown" : "closeDropdown"}
+                >
+                    {menuLinks}
+                </div>
+            )}
+            <div id="menuLinks" className={`otherPageLayout `}>
+                {menuLinks}
+            </div>
         </div>
     );
 }
